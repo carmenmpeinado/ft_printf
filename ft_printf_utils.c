@@ -1,15 +1,16 @@
 #include "ft_printf.h"
 #include <unistd.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
+// int	ft_strlen(char *str)
+// {
+// 	int	i;
 
-	i = 0;
-	while (str[i] && str)
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (str[i] && str)
+// 		i++;
+// 	return (i);
+// }
+
 int	ft_puthex(unsigned int nbr, char c)
 {
 	char *base;

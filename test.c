@@ -4,15 +4,18 @@
 
 int	main(void)
 {
-	// char *str;
-	int num = -214748364;
+	char *str;
+	// unsigned long p;
+
+	// p = 140723456532345;
 	// int	i;
 	// char j = 'A'
 
 	// i = 0;
 	// str = "Another one bites the dust";
+	str = "NULL";
 	// if (str && str[i])
-	printf("%i\n", num);
-	ft_printf("%i", num);
+	printf("%p\n", str);
+	ft_printf("%p", str);
 	return (0);
 }
