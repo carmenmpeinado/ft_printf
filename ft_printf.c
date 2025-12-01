@@ -14,8 +14,8 @@ int check_format(char const *format, va_list arg)
 		i = ft_putchar(va_arg(arg, unsigned int));
 	// else if (format[i] == 'p')
 	// 	i = ft_putptr(va_arg(arg, unsigned long));
-	// else if (format[i] == 'd' || format[i] == 'i')
-	// 	i = ft_putnbr(va_arg(arg, int));
+	else if (format[1] == 'd' || format[1] == 'i')
+		i = ft_putnbr(va_arg(arg, int));
 	// else if (format[i] == 'u')
 	// 	i = ft_putstr(va_arg(arg, unsigned int));
 	else if (format[1] == 'X' || format[1] == 'x')
