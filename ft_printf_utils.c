@@ -24,3 +24,24 @@ int	ft_puthex(unsigned int nbr, char c)
 	i += write(1, &base[nbr % 16], 1);
 	return (i);
 }
+int	ft_putchar(char c)
+{
+	int i;
+
+	i = 0;
+	if (c)
+		i = write(1, &c, 1);
+	return (i);
+}
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}

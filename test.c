@@ -4,15 +4,15 @@
 
 int	main(void)
 {
-	// char *str;
-	int num = 13904713;
-	int	i;
+	char *str;
+	// int num = 13904713;
+	// int	i;
+	// char j = 'A';
 
-	i = 0;
-	// str = "13904713";
+	// i = 0;
+	str = "Another one bites the dust";
 	// if (str && str[i])
-	if (!ft_printf("%x", num))
-		return (1);
-	printf("%x\n", num);
+	ft_printf("%s", str);
+	printf("%s\n", str);
 	return (0);
 }

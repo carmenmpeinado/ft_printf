@@ -8,8 +8,10 @@ int check_format(char const *format, va_list arg)
 	i = 0;
 	if (format[1] == '%')
 		i = write(1, "%%", 1);
-	// else if (format[i] == 'c' || format[i] == 's')
-	// 	i = ft_putstr(va_arg(arg, char *));
+	else if (format[1] == 's')
+		i = ft_putstr(va_arg(arg, char *));
+	else if (format[1] == 'c')
+		i = ft_putchar(va_arg(arg, unsigned int));
 	// else if (format[i] == 'p')
 	// 	i = ft_putptr(va_arg(arg, unsigned long));
 	// else if (format[i] == 'd' || format[i] == 'i')
