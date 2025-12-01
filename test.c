@@ -4,7 +4,7 @@
 
 int	main(void)
 {
-	char *str;
+	unsigned int str = -333;
 	// unsigned long p;
 
 	// p = 140723456532345;
@@ -13,9 +13,9 @@ int	main(void)
 
 	// i = 0;
 	// str = "Another one bites the dust";
-	str = "NULL";
+	// str = "NULL";
 	// if (str && str[i])
-	printf("%p\n", str);
-	ft_printf("%p", str);
+	printf("%u\n", str);
+	ft_printf("%u", str);
 	return (0);
 }
