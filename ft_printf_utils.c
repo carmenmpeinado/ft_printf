@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capeinad <capeinad@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/05 01:46:11 by capeinad          #+#    #+#             */
+/*   Updated: 2025/12/05 12:07:49 by capeinad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_puthex(unsigned int nbr, char c)
 {
-	char *base;
-	int	i;
+	char	*base;
+	int		i;
 
 	if (c == 'X')
 		base = "0123456789ABCDEF";
@@ -18,12 +30,11 @@ int	ft_puthex(unsigned int nbr, char c)
 
 int	ft_putchar(char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	if (c)
-		i = write(1, &c, 1);
-	return (i);
+	i = write(1, &c, 1);
+	return (1);
 }
 
 int	ft_putstr(char *str)
@@ -46,7 +57,7 @@ int	ft_putstr(char *str)
 
 int	ft_putnbr(int n)
 {
-	int	i;
+	int		i;
 	char	digit;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: capeinad <capeinad@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 01:09:02 by capeinad          #+#    #+#             */
-/*   Updated: 2025/12/05 01:34:54 by capeinad         ###   ########.fr       */
+/*   Updated: 2025/12/05 12:07:19 by capeinad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,13 @@ static int	ft_unsint(unsigned int nbr)
 	if (nbr > 0)
 	{
 		if (nbr >= 10)
-		i = ft_unsint(nbr / 10);
+			i = ft_unsint(nbr / 10);
 	}
 	i += ft_putchar((nbr % 10) + '0');
-	
 	return (i);
 }
 
-static int check_format(char const *format, va_list arg, int i)
+static int	check_format(char const *format, va_list arg, int i)
 {
 	int	count;
 	int	flag;
@@ -67,7 +66,7 @@ static int check_format(char const *format, va_list arg, int i)
 	else if (format[i] == 's')
 		count += ft_putstr(va_arg(arg, char *));
 	else if (format[i] == 'c')
-		count += ft_putchar(va_arg(arg, unsigned int));
+		count += ft_putchar(va_arg(arg, int));
 	else if (format[i] == 'p')
 		count += ft_putptr(va_arg(arg, void *), flag);
 	else if (format[i] == 'd' || format[i] == 'i')
@@ -88,6 +87,8 @@ int	ft_printf(char const *format, ...)
 	i = 0;
 	count = 0;
 	va_start(arg, format);
+	if (!format)
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -102,4 +103,3 @@ int	ft_printf(char const *format, ...)
 	va_end(arg);
 	return (count);
 }
-
